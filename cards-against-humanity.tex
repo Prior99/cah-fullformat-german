@@ -18,8 +18,9 @@
 \setlength{\baselineskip}{16pt}
 
 \newcommand{\titleleft}{CARDS AGAINST HUMANITY}
+\newcommand{\underl}{\rule{2cm}{.5pt}}
 
-\newcommand{\blackcard}[1] {\begin{tikzpicture}%
+\newcommand{\blackcard}[2] {\begin{tikzpicture}%
     \draw (0,0) rectangle (\cardwidth cm,\cardheight cm);
         \fill[black] (0, 0) rectangle (\stripwidth,\cardheight) node[rotate=90,above left,white,font=\large] {
             \titleleft
@@ -28,11 +29,12 @@
         \node[fill=white, draw=black, minimum height = \cardsymbolwidth cm, minimum width = \cardsymbolheight cm, anchor=east, rotate=0] at (4*\stripwidth/5, \stripwidth/2) { } ;
         \node[fill=white, draw=black, minimum height = \cardsymbolwidth cm, minimum width = \cardsymbolheight cm, anchor=east, rotate=-20] at (4*\stripwidth/5, \stripwidth/2) { } ;
 
-        \node[text width=(\cardwidth-\strippadding-\stripwidth-2*\textpadding-0.3)*1cm,below right, anchor=west] at (\strippadding+\stripwidth+\textpadding,\cardheight*2/3-\textpadding) {
-            {\huge #1\par}
+        \node[text width=(\cardwidth-\strippadding-\stripwidth-2*\textpadding-0.3)*1cm,below right, anchor=west] at (\strippadding+\stripwidth+\textpadding,\cardheight*1/2-\textpadding) {
+            {\huge #2\par}
         };
+        \node[anchor=south east] at (\cardwidth, 0) {\scriptsize #1};
 \end{tikzpicture}}
-\newcommand{\whitecard}[1] {\begin{tikzpicture}%
+\newcommand{\whitecard}[2] {\begin{tikzpicture}%
     \draw (0,0) rectangle (\cardwidth cm,\cardheight cm);
         \draw[gray] (0,0) rectangle (0\stripwidth,\cardheight0) node[rotate=90,above left,black,font=\large] {\titleleft};
         \node[fill=black, draw=black, minimum height = \cardsymbolwidth cm, minimum width = \cardsymbolheight cm, anchor=east, rotate=15] at (4*\stripwidth/5, \stripwidth/2) { } ;
@@ -40,13 +42,14 @@
         \node[fill=white, draw=black, minimum height = \cardsymbolwidth cm, minimum width = \cardsymbolheight cm, anchor=east, rotate=-20] at (4*\stripwidth/5, \stripwidth/2) { } ;
 
         \node[text width=(\cardwidth-\strippadding-\stripwidth-2*\textpadding-0.3)*1cm,below right, anchor=west] at (\strippadding+\stripwidth+\textpadding,\cardheight*2/3-\textpadding) {
-            {\huge #1}
+            {\huge #2\par}
         };
+        \node[anchor=south east] at (\cardwidth, 0) {\scriptsize #1};
 \end{tikzpicture}}
 
-\whitecard{Käse}%
-\whitecard{Eicheln}%
-\blackcard{Ich habe \rule{2cm}{.5pt} nie wirklich verstanden, bis ich auf \rule{2cm}{.5pt} gestoßen bin.}%
+\whitecard{FSK18}{Käse}%
+\whitecard{FSK18}{Eicheln}%
+\blackcard{FSK18}{Ich habe \underl nie wirklich verstanden, bis ich auf \underl gestoßen bin.}%
 
 
 \end{document}
