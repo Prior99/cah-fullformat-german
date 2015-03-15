@@ -3,7 +3,7 @@
 \usepackage{tikz}
 %\usepackage{pifont}
 %\usepackage{anttor}
-\usepackage[sfdefault]{ClearSans}
+\usepackage{arev}
 \usepackage[utf8]{inputenc}
 \begin{document}
 \pgfmathsetmacro{\cardwidth}{6.2}
@@ -16,6 +16,7 @@
 \pgfmathsetmacro{\cardsymbolheight}{0.4}
 
 \setlength{\baselineskip}{16pt}
+\def\SymbReg{\textsuperscript{\textregistered}}
 
 \newcommand{\titleleft}{CARDS AGAINST HUMANITY}
 \newcommand{\underl}{\rule{2cm}{.5pt}}
@@ -30,7 +31,7 @@
         \node[fill=white, draw=black, minimum height = \cardsymbolwidth cm, minimum width = \cardsymbolheight cm, anchor=east, rotate=-20] at (4*\stripwidth/5, \stripwidth/2) { } ;
 
         \node[text width=(\cardwidth-\strippadding-\stripwidth-2*\textpadding-0.3)*1cm,below right, anchor=west] at (\strippadding+\stripwidth+\textpadding,\cardheight*1/2-\textpadding) {
-            {\huge #2\par}
+            {\LARGE \raggedright #2\par}
         };
         \node[anchor=south east] at (\cardwidth, 0) {\scriptsize #1};
 \end{tikzpicture}}
@@ -42,59 +43,189 @@
         \node[fill=white, draw=black, minimum height = \cardsymbolwidth cm, minimum width = \cardsymbolheight cm, anchor=east, rotate=-20] at (4*\stripwidth/5, \stripwidth/2) { } ;
 
         \node[text width=(\cardwidth-\strippadding-\stripwidth-2*\textpadding-0.3)*1cm,below right, anchor=west] at (\strippadding+\stripwidth+\textpadding,\cardheight*2/3-\textpadding) {
-            {\huge #2\par}
+            {\LARGE #2\par}
         };
         \node[anchor=south east] at (\cardwidth, 0) {\scriptsize #1};
 \end{tikzpicture}}
 
 \whitecard{Basis}{In Flamme stehen.}%
 \whitecard{Basis}{Rassismus.}%
-\whitecard{Basis}{Den Geruch alter Leute}
-\whitecard{Basis}{In Flamme stehen.}%
+\whitecard{Basis}{Der Geruch alter Leute}
+
 \whitecard{Basis}{Rassismus.}%
-\whitecard{FSK16}{Einen Mikropenis}
-\whitecard{Basis}{Frauen in Joghurt Werbespots.}%
-\whitecard{Basis}{Sich einen Scheiss um die dritte Welt scheren.}%
-\whitecard{FSK18}{Ein Einweckglas in meinen Anus einführen.}
-\whitecard{Basis}{Gerichtlich angeordneter Entzug.}%
+\whitecard{FSK16}{Ein Mikropenis}%
+\whitecard{Basis}{Frauen in Joghurt Werbespots.}
+
+\whitecard{Böse}{Sich einen Scheiss um die dritte Welt zu scheren.}%
+\whitecard{FSK18}{Ein Einweckglas in meinen Anus einführen.}%
+\whitecard{Basis}{Gerichtlich angeordneter Entzug.}
+
 \whitecard{Böse}{Eine Windmühle voller Leichen.}%
-\whitecard{Basis}{Die Schwulen.}
 \whitecard{Basis}{Ein übergroßer Lolli.}%
+\whitecard{Basis}{Die Schwulen.}
+
 \whitecard{Basis}{Afrikanische Kinder.}%
+\whitecard{Basis}{Die Schwulen.}%
 \whitecard{Basis}{Eine asymmetrische Brustvergößerung.}
+
+\whitecard{Böse}{Afrikanische Kinder.}%
+\whitecard{Basis}{Eine asymmetrische Brust-Vergößerung.}%
+\whitecard{Eklig}{Sich überfressen und dann abführen.}
+
+\whitecard{Basis}{Der hart arbeitende Türke.}%
+\whitecard{Basis}{Ein Ödipuskomplex.}%
+\whitecard{Basis}{Ein kleines Pferd.}
+
+\whitecard{Basis}{Popel.}%
+\whitecard{Basis}{Penis Neid.}%
+\whitecard{Basis}{Angela Merkel.}
+
+\whitecard{Basis}{Barack Obama.}%
+\whitecard{Basis}{Meine Warzen.}%
+\whitecard{Basis}{Das schwedische Tempur-Pedic\SymbReg \newline  Schlafsystem.}
+
+\whitecard{Basis}{Scientology.}%
+\whitecard{Basis}{Würgen.}%
+\whitecard{Basis}{Darth Vader.}
+
+\whitecard{Basis}{Feigenpudding.}%
+\whitecard{Basis}{Ein Ratschlag von einem weisen, alten Mann.}%
+\whitecard{Basis}{5 Euro Subway Footlongs.}
+
+\whitecard{Basis}{Betagte japanische Männer.}%
+\whitecard{Basis}{Kostenlose Proben.}%
+\whitecard{Basis}{Östrogen.}
+
+\whitecard{FSK16}{Sexuelle Spannungen.}%
+\whitecard{Böse}{Hungersnot.}%
+\whitecard{Basis}{Ein verirrtes Schamhaar.}
+
+\whitecard{Basis}{Männer.}%
+\whitecard{Basis}{Herzerweichende Weisenkinder.}%
+\whitecard{Böse}{Teile eines toten Anhalters.}
+
+\whitecard{Basis}{Eine Tasche voller magischer Bohnen.}%
+\whitecard{Basis}{Unterdrückung.}%
+\whitecard{Basis}{Tänzeln.}
+
+\whitecard{Basis}{Mein Beziehungsstatus.}%
+\whitecard{Basis}{Überkompensation.}%
+\whitecard{Eklig}{Ein bisschen zu pinkeln.}
+
+\whitecard{Eklig}{Vorne und hinten Scheissen. Für immer.}%
+\whitecard{Eklig}{Ein Ball aus Ohrenschmalz, Samen und Fussnägeln.}%
+\whitecard{FSK16}{Testikuläre Verdrehung.}
+
+\whitecard{Basis}{Der Teufel höchst selbst.}%
+\whitecard{Basis}{The World of Warcraft.}%
+\whitecard{Böse}{Robo-Hitler.}
+
+\whitecard{Basis}{Einfach großartig zu sein.}%
+\whitecard{Basis}{Bilder von Brüsten.}%
+\whitecard{FSK16}{Ein sanftes Liebkosen der Oberschenkel.}
+
+\whitecard{Basis}{Die Amischen.}%
+\whitecard{Basis}{Der Rhythmus Afrikas.}%
+\whitecard{FSK16}{Lance Armstrongs fehlender Hoden.}
+
+\whitecard{Böse}{Pedophile.}%
+\whitecard{Basis}{Der Papst.}%
+\whitecard{FSK16}{Fliegende Sex-Schlangen.}
+
+\whitecard{FSK16}{Erotische Kissenschlachten.}%
+\whitecard{Basis}{In Polen einmarschieren.}%
+\whitecard{Basis}{Kybernetische Verbesserungen.}
+
+\whitecard{Böse}{Verluste von Zivilisten.}%
+\whitecard{Basis}{Arbeitsplätze.}%
+\whitecard{FSK16}{Der weibliche Orgasmus.}
+
+\whitecard{Basis}{Schlampen.}%
+\whitecard{Basis}{Die Pfadfinder.}%
+\whitecard{Böse}{Auschwitz.}
+
+\whitecard{Basis}{Fingerfarben.}%
+\whitecard{Basis}{Der Erklär-Bär-Blick.}%
+\whitecard{Böse}{Die Juden.}
+
+\whitecard{Basis}{Marginalisiert zu werden.}%
+\whitecard{Basis}{Das Blut von Jesus Christus.}%
+\whitecard{Böse}{Tote Eltern.}
+
+\whitecard{Basis}{Die Kunst der Verführung.}%
+\whitecard{Basis}{An Dysentery sterben.}%
+\whitecard{Basis}{Meister Proper Sauberkraft.}
+
+\whitecard{Basis}{Ackerbau.}%
+\whitecard{Basis}{Richterin Barbara Salesch.}%
+\whitecard{FSK16}{Überraschungs Sex!}
+
+\whitecard{Basis}{Der homosexuelle Lebensstil.}%
+\whitecard{Basis}{Die Spur aus Tränen}%
+\whitecard{Basis}{Funkig-Frische Rhythmen.}
+
+\whitecard{Basis}{Das Licht einer Milliarde Sonnen.}%
+\whitecard{Böse}{Menschen mit Amputationen.}%
+\whitecard{Basis}{Eine Jungfrau in einen Vulkan zu werfen.}
+
+\whitecard{Basis}{Italiener.}%
+\whitecard{Basis}{Explosionen.}%
+\whitecard{Basis}{Einmal richtig dran Schnuppern.}
+
+\whitecard{Basis}{Die Beweise vernichten.}%
+\whitecard{Basis}{Kinder an Leinen.}%
+\whitecard{Basis}{Katapulte}
+
+\whitecard{Basis}{Eine Billion Euro.}%
+\whitecard{Basis}{Freunde mit gewissen Vorzügen.}%
+\whitecard{Basis}{Sterben.}
+
+\whitecard{Basis}{Stille.}%
+\whitecard{Basis}{Sich ein paar Eier wachsen zu lassen.}%
+\whitecard{Basis}{DU MUSST WEITERE MASTEN KONSTRUIEREN.}
+
+\whitecard{Basis}{Justin Bieber.}%
+\whitecard{Basis}{Die Bibel.}%
+\whitecard{Basis}{Eier.}
+
+\whitecard{Basis}{Für das Verschwinden der Schwulen zu beten.}%
+\whitecard{Basis}{Teenager Schwangerschaft.}%
+\whitecard{FSK18}{Deutsche Sado-Maso-Pornos.}
+
+\whitecard{Basis}{Die unsichtbare Hand.}%
+\whitecard{Basis}{Meine inneren Dämonen.}%
+\whitecard{Basis}{Kräftige Oberschenkel.}
+
+\whitecard{FSK16}{Sich nackt ausziehen und Kika gucken.}%
+\whitecard{Basis}{Erdrückende Schulden.}%
+\whitecard{Basis}{Kamikaze-Kissen.}
+
+\whitecard{Basis}{Einem Roboter beibringen, zu lieben.}%
+\whitecard{Basis}{Polizeigewalt.}%
+\whitecard{Basis}{Pferdefleisch.}
+
+\whitecard{Basis}{All-you-can-eat Shrimps für 4,99 Euro.}%
+\whitecard{Basis}{Heteronormativität.}%
+\whitecard{Basis}{Michael Jackson.}
+
+\whitecard{Basis}{Ein wirklich cooler Hut.}%
+\whitecard{Basis}{Von einem Gefühlt erwischt zu werden}%
+\whitecard{Basis}{Ein übergroßer Lolli.}
+
+\blackcard{Basis}{Ich habe \underl \newline nie wirklich verstanden, bis \newline  ich auf \underl \newline  gestoßen bin.}%
 \blackcard{Basis}{Ich habe \underl nie wirklich verstanden, bis ich auf \underl gestoßen bin.}%
-\blackcard{FSK18}{}%
-\blackcard{Basis}{Was ist die neue Modediät?}%
 \blackcard{Basis}{Was hat nie verfehlt, eine Party zu beleben?}
+
 \blackcard{Basis}{\underl + \underl = \underl.}%
 \blackcard{Drogen}{Was ist meine Anti-Droge?%
 \blackcard{Basis}{Ja richtig, ich habe \underl getötet. Wie fragst du? \underl.}
+
 \blackcard{Drogen}{Als einen Acid-trip hatte, \underl wurde zu \underl.}%
 \blackcard{Basis}{Wenn ich ein Milliadär wäre, um wem zu gedenken würde ich eine Statue bauen?}%
 \blackcard{Basis}{Wenn ich König von Deutschland wär, würd ich das \underl Ministerium ins Leben rufen.}
+
 \blackcard{Basic}{Dreamworks präsentiert "\underl die Geschichte von \underl."}%
-\blackcard{}{}%
-\blackcard{}{}
-\blackcard{}{}%
-\blackcard{}{}%
-\blackcard{}{}
-\blackcard{}{}%
-\blackcard{}{}%
-\blackcard{}{}
-\blackcard{}{}%
-\blackcard{}{}%
-\blackcard{}{}
-\blackcard{}{}%
-\blackcard{}{}%
-\blackcard{}{}
-\blackcard{}{}%
-\blackcard{}{}%
-\blackcard{}{}
-\blackcard{}{}%
-\blackcard{}{}%
-\blackcard{}{}
-\blackcard{}{}%
-\blackcard{}{}%
-\blackcard{}{}
+\blackcard{Basis}{Was ist die neue Modediät?}%
+\blackcard{Basis}{}%
 
 \end{document}
