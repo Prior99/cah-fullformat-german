@@ -1,6 +1,6 @@
 default: cah-fullformat-german.pdf
 
-cah-fullformat-german.pdf:cards-against-humanity.tex
+cah-fullformat-german.pdf:cah-fullformat-german.tex categories/*.tex
 	pdflatex $<
 
 clean:
