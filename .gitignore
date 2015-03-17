@@ -2,3 +2,4 @@
 !*.tex
 !*.txt
 !.gitignore
+!categories/
