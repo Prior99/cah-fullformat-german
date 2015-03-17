@@ -1,0 +1,23 @@
+\documentclass[a4paper,parskip]{scrartcl}
+\usepackage[top=10mm,bottom=10mm,left=15mm,right=15mm]{geometry}
+\usepackage{tikz}
+\usepackage{arev}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\setlength{\baselineskip}{16pt}
+\def\SymbReg{\textsuperscript{\textregistered}}
+\setlength{\parskip}{0pt}
+
+\include{commands}
+
+\whitecard{Test}{Lorem Ipsum dolor sit amet.}
+\whitecard{Test}{Foo bar bas.}
+\whitecard{Test}{Die ist ein für\newline eine weisse\newline Karte relativ\newline langer Text.\newline Sehr viel länger\newline als so wird es\newline eigentlich nicht.}
+\whitecard{Test}{Ein mittellanger Satz sähe dann in etwa so aus.}
+\blackcard{1}{Test}{Edipiscir \underl eunt omnia gallia.}
+\blackcard{1}{Test}{Divisa est partes?}
+\blackcard{2}{Test}{Tres gaius iulius caesar \underl.}
+\blackcard{3}{Test}{This \underl is a really long text and I want to know hot the \underl cards behave when the text is so fucking long. Will it break?}
+
+\end{document}

@@ -1,0 +1,55 @@
+\pgfmathsetmacro{\cardwidth}{6.2}
+\pgfmathsetmacro{\cardheight}{8.8}
+\pgfmathsetmacro{\stripwidth}{0.6}
+\pgfmathsetmacro{\strippadding}{0.1}
+\pgfmathsetmacro{\textpadding}{0.1}
+\pgfmathsetmacro{\ruleheight}{0.15}
+\pgfmathsetmacro{\cardsymbolwidth}{0.25}
+\pgfmathsetmacro{\cardsymbolheight}{0.4}
+\pgfmathsetmacro{\circlesize}{8}
+\pgfmathsetmacro{\paddingtop}{0.8}
+
+\newcommand{\titleleft}{CARDS AGAINST HUMANITY}
+\newcommand{\underl}{\rule{2cm}{.5pt}}
+
+\newcommand{\blackcard}[3] {%
+	\begin{tikzpicture}%
+		\draw (0,0) rectangle (\cardwidth cm,\cardheight cm);
+		% Bar left
+		\fill[black] (0, 0) rectangle (\stripwidth,\cardheight) node[rotate=90,above left,white,font=\large] {\titleleft};
+		% Icon
+		\node[fill=black, draw=white, minimum height = \cardsymbolwidth cm, minimum width = \cardsymbolheight cm, anchor=east, rotate=15] at (4*\stripwidth/5, \stripwidth/2) { } ;
+		\node[fill=white, draw=black, minimum height = \cardsymbolwidth cm, minimum width = \cardsymbolheight cm, anchor=east, rotate=0] at (4*\stripwidth/5, \stripwidth/2) { } ;
+		\node[fill=white, draw=black, minimum height = \cardsymbolwidth cm, minimum width = \cardsymbolheight cm, anchor=east, rotate=-20] at (4*\stripwidth/5, \stripwidth/2) { } ;
+		% Text
+		\node[text width=(\cardwidth-\strippadding-\stripwidth-2*\textpadding-0.3)*1cm,below right, anchor=north west] at (\strippadding+\stripwidth+\textpadding,\cardheight-\textpadding-\paddingtop)
+		{{\Large #3\par}};
+		\fill[black, anchor=south west](\stripwidth cm + \circlesize*1.5 pt, \circlesize*2 pt) circle(\circlesize pt);
+		\node[anchor=center, color=white] at (\stripwidth cm + \circlesize*1.5 pt, \circlesize*2 pt) {\textbf{#1}};
+		\node[anchor=west, color=black] at (\stripwidth cm + \circlesize*2.5 pt, \circlesize*2 pt)
+		{\ifnum#1=1
+			Karte
+		\else
+			Karten
+		\fi};
+		% Category
+		\node[anchor=south east] at (\cardwidth, 0) {\scriptsize #2};
+	\end{tikzpicture}
+}
+
+\newcommand{\whitecard}[2] {%
+	\begin{tikzpicture}%
+		\draw (0,0) rectangle (\cardwidth cm,\cardheight cm);
+		% Bar left
+		\draw[gray] (0,0) rectangle (0\stripwidth,\cardheight0) node[rotate=90,above left,black,font=\large] {\titleleft};
+		% Icon
+		\node[fill=black, draw=black, minimum height = \cardsymbolwidth cm, minimum width = \cardsymbolheight cm, anchor=east, rotate=15] at (4*\stripwidth/5, \stripwidth/2) { } ;
+		\node[fill=white, draw=black, minimum height = \cardsymbolwidth cm, minimum width = \cardsymbolheight cm, anchor=east, rotate=0] at (4*\stripwidth/5, \stripwidth/2) { } ;
+		\node[fill=white, draw=black, minimum height = \cardsymbolwidth cm, minimum width = \cardsymbolheight cm, anchor=east, rotate=-20] at (4*\stripwidth/5, \stripwidth/2) { } ;
+		% Text
+		\node[text width=(\cardwidth-\strippadding-\stripwidth-2*\textpadding-0.3)*1cm,below right, anchor=north west] at (\strippadding+\stripwidth+\textpadding,\cardheight-\textpadding-\paddingtop)
+		{{\LARGE #2\par}};
+		% Category
+		\node[anchor=south east] at (\cardwidth, 0) {#1};
+	\end{tikzpicture}
+}
