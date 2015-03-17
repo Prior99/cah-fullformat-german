@@ -1,3 +1,24 @@
+%
+% This file is part of Cards Against Humanity Fullformat German.
+%
+% Cards Against Humanity Fullformat German is free software:
+% you can redistribute it and/or modify it under the terms of the
+% GNU General Public License as published by the Free Software Foundation,
+% either version 3 of the License, or (at your option) any later version.
+%
+% Cards Against Humanity Fullformat German is distributed in the hope that it
+% will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with Cards Against Humanity Fullformat German.
+% If not, see <http://www.gnu.org/licenses/>.
+%
+%
+% Please note: All whitespace characters might break this document. Please
+% avoid placing whitespace character that are not intended inside these files.
+%
 \pgfmathsetmacro{\cardwidth}{6.2}
 \pgfmathsetmacro{\cardheight}{8.8}
 \pgfmathsetmacro{\stripwidth}{0.6}
@@ -8,6 +29,10 @@
 \pgfmathsetmacro{\cardsymbolheight}{0.4}
 \pgfmathsetmacro{\circlesize}{8}
 \pgfmathsetmacro{\paddingtop}{0.8}
+\pgfmathsetmacro{\titleheight}{1}
+\pgfmathsetmacro{\cardsymbolwidthbig}{1.5}
+\pgfmathsetmacro{\cardsymbolheightbig}{.95}
+
 
 \newcommand{\titleleft}{CARDS AGAINST HUMANITY}
 \newcommand{\underl}{\rule{2cm}{.5pt}}
@@ -51,5 +76,23 @@
 		{{\LARGE #2\par}};
 		% Category
 		\node[anchor=south east] at (\cardwidth, 0) {#1};
+	\end{tikzpicture}%
+}%
+
+
+\newcommand{\titlecard}[1] {%
+\begin{tikzpicture}%
+	\draw (0,0) rectangle (\cardwidth cm,\cardheight cm);
+	% Bar middle
+	\draw[black] (0,\cardheight/2 - \titleheight) rectangle (\cardwidth,\stripwidth*3/4 + \cardheight/2 - \titleheight);
+	\node[anchor = south , black,font=\scriptsize] at (\cardwidth/2,\cardheight/2 - \titleheight - \stripwidth/20) {\titleleft};
+	%categorytitle
+	\fill[black](0,\cardheight/2 + \titleheight) rectangle (\cardwidth, \stripwidth*3/4 + \cardheight/2 - \titleheight);
+	\node[anchor = center, white,font=\Huge] at (\cardwidth/2,\cardheight/2 + \titleheight*0.2) {#1};
+	% Icon
+	\node[fill=black, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=15] at (\cardwidth/2, 1cm) { } ;
+	\node[fill=white, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=0] at (\cardwidth/2, 1cm) { } ;
+	\node[fill=white, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=-20] at (\cardwidth/2, 1cm) { } ;
+	% Text
 	\end{tikzpicture}%
 }%
