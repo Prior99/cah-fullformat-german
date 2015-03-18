@@ -48,7 +48,7 @@
 		\node[fill=white, draw=black, minimum height = \cardsymbolwidth cm, minimum width = \cardsymbolheight cm, anchor=east, rotate=-20] at (4*\stripwidth/5, \stripwidth/2) { } ;
 		% Text
 		\node[text width=(\cardwidth-\strippadding-\stripwidth-2*\textpadding-0.3)*1cm,below right, anchor=north west] at (\strippadding+\stripwidth+\textpadding,\cardheight-\textpadding-\paddingtop)
-		{{\Large #3\par}};
+		{{\flushleft \Large #3\par}};
 		\fill[black, anchor=south west](\stripwidth cm + \circlesize*1.5 pt, \circlesize*2 pt) circle(\circlesize pt);
 		\node[anchor=center, color=white] at (\stripwidth cm + \circlesize*1.5 pt, \circlesize*2 pt) {\textbf{#1}};
 		\node[anchor=west, color=black] at (\stripwidth cm + \circlesize*2.5 pt, \circlesize*2 pt)
@@ -73,7 +73,7 @@
 		\node[fill=white, draw=black, minimum height = \cardsymbolwidth cm, minimum width = \cardsymbolheight cm, anchor=east, rotate=-20] at (4*\stripwidth/5, \stripwidth/2) { } ;
 		% Text
 		\node[text width=(\cardwidth-\strippadding-\stripwidth-2*\textpadding-0.3)*1cm,below right, anchor=north west] at (\strippadding+\stripwidth+\textpadding,\cardheight-\textpadding-\paddingtop)
-		{{\LARGE #2\par}};
+		{{\flushleft \LARGE #2\par}};
 		% Category
 		\node[anchor=south east] at (\cardwidth, 0) {#1};
 	\end{tikzpicture}%
