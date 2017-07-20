@@ -35,6 +35,7 @@
 
 
 \newcommand{\titleleft}{CARDS AGAINST HUMANITY}
+\newcommand{\titleback}{CARDS AGAINST HUMANITY}
 \newcommand{\underl}{\rule{2cm}{.5pt}\hspace{3pt}}
 
 \newcommand{\blackcard}[3] {%
@@ -89,6 +90,36 @@
 		%categorytitle
 		\fill[black](0,\cardheight/2 + \titleheight) rectangle (\cardwidth, \stripwidth*3/4 + \cardheight/2 - \titleheight);
 		\node[anchor = center, white,font=\Huge] at (\cardwidth/2,\cardheight/2 + \titleheight*0.2) {#1};
+		% Icon
+		\node[fill=black, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=15] at (\cardwidth/2, 1cm) { } ;
+		\node[fill=white, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=0] at (\cardwidth/2, 1cm) { } ;
+		\node[fill=white, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=-20] at (\cardwidth/2, 1cm) { } ;
+		% Text
+	\end{tikzpicture}%
+}%
+
+\newcommand{\whitecardback} {%
+	\begin{tikzpicture}%
+		\draw (0,0) rectangle (\cardwidth cm,\cardheight cm);
+		% Title
+		\node[anchor=center,text width=(\cardwidth-\strippadding-\stripwidth-2*\textpadding-0.3)*1cm,below right] at (\strippadding+\stripwidth+\textpadding,\cardheight-\textpadding-\paddingtop)
+		{{\flushleft \Huge \titleback\par}};
+		% Icon
+		\node[fill=black, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=15] at (\cardwidth/2, 1cm) { } ;
+		\node[fill=white, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=0] at (\cardwidth/2, 1cm) { } ;
+		\node[fill=white, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=-20] at (\cardwidth/2, 1cm) { } ;
+		% Text
+	\end{tikzpicture}%
+}%
+
+\newcommand{\blackcardback} {%
+	\begin{tikzpicture}%
+		\draw (0,0) rectangle (\cardwidth cm,\cardheight cm);
+		% Bar left
+		\fill[black] (0, 0) rectangle (\stripwidth,\cardheight) node[rotate=90,above left,white,font=\large] {};
+		% Title
+		\node[anchor=center,black,text width=(\cardwidth-\strippadding-\stripwidth-2*\textpadding-0.3)*1cm,below right] at (\strippadding+\stripwidth+\textpadding,\cardheight-\textpadding-\paddingtop)
+		{{\flushleft \Huge \titleback\par}};
 		% Icon
 		\node[fill=black, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=15] at (\cardwidth/2, 1cm) { } ;
 		\node[fill=white, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=0] at (\cardwidth/2, 1cm) { } ;
