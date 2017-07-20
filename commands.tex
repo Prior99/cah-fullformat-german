@@ -81,18 +81,18 @@
 
 
 \newcommand{\titlecard}[1] {%
-\begin{tikzpicture}%
-	\draw (0,0) rectangle (\cardwidth cm,\cardheight cm);
-	% Bar middle
-	\draw[black] (0,\cardheight/2 - \titleheight) rectangle (\cardwidth,\stripwidth*3/4 + \cardheight/2 - \titleheight);
-	\node[anchor = south , black,font=\scriptsize] at (\cardwidth/2,\cardheight/2 - \titleheight - \stripwidth/20) {\titleleft};
-	%categorytitle
-	\fill[black](0,\cardheight/2 + \titleheight) rectangle (\cardwidth, \stripwidth*3/4 + \cardheight/2 - \titleheight);
-	\node[anchor = center, white,font=\Huge] at (\cardwidth/2,\cardheight/2 + \titleheight*0.2) {#1};
-	% Icon
-	\node[fill=black, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=15] at (\cardwidth/2, 1cm) { } ;
-	\node[fill=white, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=0] at (\cardwidth/2, 1cm) { } ;
-	\node[fill=white, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=-20] at (\cardwidth/2, 1cm) { } ;
-	% Text
+	\begin{tikzpicture}%
+		\draw (0,0) rectangle (\cardwidth cm,\cardheight cm);
+		% Bar middle
+		\draw[black] (0,\cardheight/2 - \titleheight) rectangle (\cardwidth,\stripwidth*3/4 + \cardheight/2 - \titleheight);
+		\node[anchor = south , black,font=\scriptsize] at (\cardwidth/2,\cardheight/2 - \titleheight - \stripwidth/20) {\titleleft};
+		%categorytitle
+		\fill[black](0,\cardheight/2 + \titleheight) rectangle (\cardwidth, \stripwidth*3/4 + \cardheight/2 - \titleheight);
+		\node[anchor = center, white,font=\Huge] at (\cardwidth/2,\cardheight/2 + \titleheight*0.2) {#1};
+		% Icon
+		\node[fill=black, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=15] at (\cardwidth/2, 1cm) { } ;
+		\node[fill=white, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=0] at (\cardwidth/2, 1cm) { } ;
+		\node[fill=white, draw=black, minimum height = \cardsymbolwidthbig cm, minimum width = \cardsymbolheightbig cm, anchor=south, rotate=-20] at (\cardwidth/2, 1cm) { } ;
+		% Text
 	\end{tikzpicture}%
 }%
