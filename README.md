@@ -31,7 +31,9 @@ These are the three types of cards (Titlecards for each category, white cards wi
 
 ![title card](http://i.imgur.com/5UfZXBI.png)
 ![white card](http://i.imgur.com/e8fvNCz.png)
+![white card back](http://i.imgur.com/YK41GSq.png)
 ![black card](http://i.imgur.com/mwe44Fc.png)
+![black card back](http://imgur.com/PC5bJ0rl.png)
 
 ## Contributors
 
