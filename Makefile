@@ -1,6 +1,6 @@
 default: cah-fullformat-german.pdf
 
-cah-fullformat-german.pdf:cah-fullformat-german.tex categories/*.tex
+cah-fullformat-german.pdf:cah-fullformat-german.tex commands.tex categories/*.tex
 	pdflatex $<
 
 clean:
