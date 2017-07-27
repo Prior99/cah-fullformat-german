@@ -20,37 +20,35 @@
 % avoid placing whitespace character that are not intended inside these files.
 %
 \documentclass[a4paper,parskip]{scrartcl}
-\usepackage[top=10mm,bottom=10mm,left=13mm,right=15mm]{geometry}
+\usepackage[a4paper,top=10mm,bottom=10mm,left=10mm,right=10mm]{geometry}
 \usepackage{tikz}
 \usepackage{arev}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{etoolbox}
+
 \begin{document}
+
 \def\SymbReg{\textsuperscript{\textregistered}}
 \setlength{\parskip}{-1pt}
+\setlength{\lineskip}{0pt}
+
+\centering
 
 \include{commands}
 
 \include{categories/basis}
-\newpage
 \include{categories/boese}
-\newpage
 \include{categories/drogen}
-\newpage
 \include{categories/eklig}
-\newpage
 \include{categories/fsk16}
-\newpage
 \include{categories/fsk18}
-\newpage
 \include{categories/politik}
-\newpage
 \include{categories/kultur}
-\newpage
 \include{categories/religion}
-\newpage
 \include{categories/geschichte}
-\newpage
 \include{categories/werbung}
+
+\makeCardLists
 
 \end{document}
