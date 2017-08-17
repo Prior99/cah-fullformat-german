@@ -20,35 +20,35 @@
 % avoid placing whitespace character that are not intended inside these files.
 %
 \documentclass[a4paper,parskip]{scrartcl}
-\usepackage[top=10mm,bottom=10mm,left=17mm,right=17mm]{geometry}
+\usepackage[a4paper,top=10mm,bottom=10mm,left=10mm,right=10mm]{geometry}
 \usepackage{tikz}
 \usepackage{arev}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{etoolbox}
+
 \begin{document}
+
 \def\SymbReg{\textsuperscript{\textregistered}}
 \setlength{\parskip}{-1pt}
+\setlength{\lineskip}{0pt}
+
+\centering
 
 \include{commands}
 
 \titlecard{Test}%
-%
-% Whitecards
-%
+
 \whitecard{Test}{Lorem Ipsum dolor sit amet.}%
 \whitecard{Test}{Foo bar bas.}%
-
 \whitecard{Test}{Die ist ein für\newline eine weisse\newline Karte relativ\newline langer Text.\newline Sehr viel länger\newline als so wird es\newline eigentlich nicht.}%%
 \whitecard{Test}{Ein mittellanger Satz sähe dann in etwa so aus.}%
 
-%
-% Blackcards
-%
-
 \blackcard{1}{Test}{Edipiscir \underl eunt omnia gallia.}%
 \blackcard{1}{Test}{Divisa est partes?}%
-
 \blackcard{2}{Test}{Tres gaius iulius caesar \underl.}%
 \blackcard{3}{Test}{This \underl is a really long text and I want to know hot the \underl cards behave when the text is so fucking long. Will it break?}%
+
+\makeCardLists
 
 \end{document}
