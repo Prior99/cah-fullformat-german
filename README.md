@@ -14,18 +14,19 @@ The PDF contains card fronts on odd and the corresponding card backs on even pag
 
 ## Categories
 
-The cards were categorized so you can choose a fitting set of cards for each group of people to play with. The current categories are (german):
+The cards were categorized so you can choose a fitting set of cards for each group of people to play with. The current categories are (German):
 
- * Politik
- * Geschichte
- * Religion
- * Kultur
+ + Basis
+ * Böse
  * Drogen
+ * Eklig
+ * Geschichte
+ * Kultur
  * FSK 16
  * FSK 18
- * Eklig
- * Böse
- + Basis
+ * Politik
+ * Religion
+ * Werbung
 
 ## Preview
 
@@ -46,6 +47,9 @@ These are the three types of cards (Titlecards for each category, white cards wi
  * Prior (Frederick Gnodtke)
  * Moerrrlin (Merlin Rübsteck)
  * n00b42 (Maximilian Senftleben)
+ * AnotherStranger (André Büsgen)
+ * Vankog (Daniel Mönch)
+ * "Balz" & "Raphael" for the officially recognized fan-translations
 
 ## License
 
