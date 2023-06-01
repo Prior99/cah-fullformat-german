@@ -1,6 +1,7 @@
 *
 !*.tex
 !*.txt
+!.github/
 !.gitignore
 !categories/
 !Makefile
